@@ -6,7 +6,7 @@ const datamodel = require('../models/datamodels')
 exports.convert = async(req,res,next) =>{
    try{
       const change = await datamodel.find({});
-      console.log(change)
+     
       res.json({
          success:true,
          change
@@ -14,7 +14,7 @@ exports.convert = async(req,res,next) =>{
    }catch (error){
          res.status(404).json({
             success:false,
-            message:error.message
+            message:'error boy err'
          })
    };
    
